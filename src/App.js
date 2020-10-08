@@ -6,21 +6,25 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Tic Tac Toe in React</h1>
       </header>
+      <Game />
     </div>
   );
+}
+
+function generateGrid(rows, columns, mapper) {
+  return Array(rows).fill().map(() =>
+    Array(columns).fill().map(mapper))
+}
+
+const newTicTacToeGrid = () =>
+  generateGrid(3, 3, () => null)
+
+function Game() {
+  const grid = newTicTacToeGrid()
+  console.log(grid)
+  return <div>Game</div>
 }
 
 export default App;
