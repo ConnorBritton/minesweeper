@@ -48,12 +48,62 @@ const cellStyle = {
   width: 75,
 }
 
-function Cell({ cell }) {
-  return <div style={cellStyle}>{cell}</div>
+function Cell({ cell, handleClick }) {
+  return (
+    <div style={cellStyle}>
+      <button type="button" onClick={handleClick}>
+        {cell}
+      </button>
+    </div>
+  )
+}
+
+// deeply clone array or object
+const clone = x => JSON.parse(JSON.stringify(x))
+
+// enum to get next turn
+const NEXT_TURN = {
+  O: 'X',
+  X: 'O',
+}
+
+const initialState = {
+  grid: newTicTacToeGrid(),
+  turn: 'X',
+}
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'CLICK': {
+      const { x, y } = action.payload
+      const nextState = clone(state)
+      const { grid, turn } = nextState
+
+      // if the cell already has a value, clicking on it should do nothing
+      if(grid[y][x]) {
+        return state
+      }
+
+      grid[y][x] = turn
+
+      nextState.turn = NEXT_TURN[turn]
+
+      return nextState
+    }
+
+    default:
+      return state
+  }
 }
 
 function Game() {
-  const grid = newTicTacToeGrid()
+  const [state, dispatch] = React.useReducer(reducer, initialState)
+  const { grid } = state
+
+  const handleClick = (x, y) => {
+    dispatch({ type: 'CLICK', payload: { x, y } })
+  }
+
   return <Grid grid={grid} />
 }
 
