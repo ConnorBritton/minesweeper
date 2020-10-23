@@ -158,11 +158,6 @@ let MSGame = (function(){
                 console.log(self.getRendering().join("\n"));
                 console.log(self.getStatus());
             }
-            // JQuery TapHold Handler
-            // $(function(){
-            //     $(container).bind( "taphold", respondRightClick);
-            // });
-            //
 
             let easy = document.getElementById('easy');
             let medium = document.getElementById('medium');
