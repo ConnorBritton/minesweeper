@@ -162,6 +162,7 @@ let MSGame = (function(){
             // $(function(){
             //     $(container).bind( "taphold", respondRightClick);
             // });
+            //
 
             let easy = document.getElementById('easy');
             let medium = document.getElementById('medium');
