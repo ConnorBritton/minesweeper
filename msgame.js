@@ -158,6 +158,15 @@ let MSGame = (function(){
                 console.log(self.getRendering().join("\n"));
                 console.log(self.getStatus());
             }
+            // JQuery TapHold Handler
+            $(function(){
+                $( "button" ).bind( "taphold", respondRightClick);
+                // $( "button" ).bind( "taphold", tapholdHandler);
+                // function tapholdHandler( event ){
+                //     $(event.target).addClass( "taphold" );
+                // }
+            });
+
             let easy = document.getElementById('easy');
             let medium = document.getElementById('medium');
             easy.addEventListener('click', easyModeReset);
@@ -360,23 +369,3 @@ let MSGame = (function(){
 })();
 
 let game = new MSGame();
-
-// game.init(8, 10, 10);
-// console.log(game.getRendering().join("\n"));
-// console.log(game.getStatus());
-
-// game.uncover(2,5);
-// console.log(game.getRendering().join("\n"));
-// console.log(game.getStatus());
-
-// game.uncover(5,5);
-// console.log(game.getRendering().join("\n"));
-// console.log(game.getStatus());
-
-// game.mark(4,5);
-// console.log(game.getRendering().join("\n"));
-// console.log(game.getStatus());
-
-
-// console.log("end");
-
