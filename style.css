@@ -1,0 +1,116 @@
+* {
+    font-family: Impact;
+    font-size: 1.0rem;
+}
+
+body {
+    background: rgb(225, 240, 158);
+    max-width: 800px;
+    margin: auto;
+    height: 100%;
+}
+
+html{
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+.wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#btnContainer{
+    width: 400px;
+    margin: 0 auto;
+    display: grid;
+}
+
+#menu{
+    width: 380px;
+    margin: 0 auto;
+    background-color: #4B7430;
+    padding: 10px;
+}
+
+#flag{
+    margin: 0 auto;
+    padding: 0px 5px 0px 50px;
+    color: red;
+}
+
+#flagCount{
+    color: white;
+}
+
+#stopwatch{
+    margin: 0 auto;
+    padding: 0px 5px 0px 50px;
+    color: rgb(255, 221, 31);
+}
+
+#timer{
+    color:white;
+}
+
+.nav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* padding: 4px; */
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-middle{
+    align-items: center;
+}
+
+.container{
+    margin: 0 auto;
+}
+
+.nav li button{
+    display: block;
+    /* padding: 4px; */
+    /* color: white; */
+    /* font-size: 22px; */
+    text-decoration: none;
+}
+
+.popup {
+    position: relative;
+    /* display: inline-block; */
+    margin: 0 auto;
+    /* cursor: pointer; */
+}
+.popup .popuptext{
+    /* display: none; */
+    /* position: fixed; */
+    visibility: hidden;
+    z-index: 1;
+    width: 160px;
+    text-align: center;
+    padding: 8px 0;
+    margin: 0 auto;
+    display: grid;
+    /* background: rgb(124, 192, 255); */
+}
+
+.popup .show {
+    visibility: visible;
+}
+
+#tryAgain{
+    width: 100px;
+    margin: 0 auto;
+    cursor: pointer;
+    background: #8ECC39;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="https://kit.fontawesome.com/86d78876c2.js" crossorigin="anonymous"></script>
+        <title>Minesweeper</title>
+        <link rel="icon" href="https://w1.pngwing.com/pngs/249/974/png-transparent-red-circle-minesweeper-minesweeper-deluxe-minesweeper-adfree-video-games-land-mine-naval-mine-android-thumbnail.png" type="image/x-icon">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class='main'>
+            <div class='wrapper'>
+                <div class="container flex flex-middle">
+                    <ul class='nav flex' id='menu'>
+                        <li><button class="dif" id='easy'>Easy</button></li>
+                        <li><button class="dif" id='medium'>Medium</button></li>
+                        <li><i class="fas fa-flag fa-1g" id='flag'></i></li>
+                        <li><div id='flagCount'></div></li>
+                        <li><i class="fas fa-stopwatch" id='stopwatch'></i></li>
+                        <li><div id='timer'></div></li>
+                    </ul>
+                </div>
+                <div id='btnContainer'></div>
+                <div class="popup">
+                    <span class="popuptext" id="gameDone"></span>
+                    <button class="popuptext" id="tryAgain">Try Again?</button>              
+                </div>
+                <script src="msgame.js"></script>
+            </div>
+        </div>
+    </body>
+</html>
