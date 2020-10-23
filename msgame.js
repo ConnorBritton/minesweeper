@@ -159,13 +159,9 @@ let MSGame = (function(){
                 console.log(self.getStatus());
             }
             // JQuery TapHold Handler
-            $(function(){
-                $(container).bind( "taphold", respondRightClick);
-                // $( "button" ).bind( "taphold", tapholdHandler);
-                // function tapholdHandler( event ){
-                //     $(event.target).addClass( "taphold" );
-                // }
-            });
+            // $(function(){
+            //     $(container).bind( "taphold", respondRightClick);
+            // });
 
             let easy = document.getElementById('easy');
             let medium = document.getElementById('medium');
