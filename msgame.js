@@ -160,7 +160,7 @@ let MSGame = (function(){
             }
             // JQuery TapHold Handler
             $(function(){
-                $( "button" ).bind( "taphold", respondRightClick);
+                $(container).bind( "taphold", respondRightClick);
                 // $( "button" ).bind( "taphold", tapholdHandler);
                 // function tapholdHandler( event ){
                 //     $(event.target).addClass( "taphold" );
